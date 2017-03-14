@@ -1,0 +1,554 @@
+{
+    "name": "observation",
+    "children": [
+            { "name": "resourceType", "type": "Observation" }, {
+                "name": "identifier",
+                "children": [
+                    { "name": "use", "type": "<code>" }, {
+                        "name": "type",
+                        "children": [{
+                                "name": "coding",
+                                "children": [
+                                    { "name": "system", "type": "<uri>" },
+                                    { "name": "version", "type": "<string>" },
+                                    { "name": "code", "type": "<code>" },
+                                    { "name": "display", "type": "<string>" },
+                                    { "name": "userSelected", "type": ["true", "false"] }
+                                ]
+                            },
+                            { "name": "text", "type": "<string>" }
+                        ]
+                    },
+                    { "name": "system", "type": "<uri>" },
+                    { "name": "value", "type": "<string>" }, {
+                        "name": "period",
+                        "children": [
+                            { "name": "start", "type": "<dateTime>" },
+                            { "name": "end", "type": "<dateTime>" }
+                        ]
+                    }, {
+                        "name": "assigner",
+                        "children": [
+                            { "name": "reference", "type": "<string>" },
+                            { "name": "display", "type": "<string>" }
+                        ]
+                    }
+                ]
+            },
+            { "name": "status", "type": "<code>" }, {
+                "name": "category",
+                "children": [{
+                        "name": "coding",
+                        "children": [
+                            { "name": "system", "type": "<uri>" },
+                            { "name": "version", "type": "<string>" },
+                            { "name": "code", "type": "<code>" },
+                            { "name": "display", "type": "<string>" },
+                            { "name": "userSelected", "type": ["true", "false"] }
+                        ]
+                    },
+
+                    { "name": "text", "type": "<string>" }
+                ]
+            }, {
+                "name": "code",
+                "children": [{
+                        "name": "coding",
+                        "children": [
+                            { "name": "system", "type": "<uri>" },
+                            { "name": "version", "type": "<string>" },
+                            { "name": "code", "type": "<code>" },
+                            { "name": "display", "type": "<string>" },
+                            { "name": "userSelected", "type": ["true", "false"] }
+                        ]
+                    },
+
+                    { "name": "text", "type": "<string>" }
+                ]
+            }, {
+                "name": "subject",
+                "children": [
+                    { "name": "reference", "type": "<string>" },
+                    { "name": "display", "type": "<string>" }
+                ]
+            }, {
+                "name": "encounter",
+                "children": [
+                    { "name": "reference", "type": "<string>" },
+                    { "name": "display", "type": "<string>" }
+                ]
+            }, {
+                "name": "effectives",
+                "children": [
+                    { "name": "effectiveDateTime", "type": "<dateTime>" }, {
+                        "name": "effectivePeriod",
+                        "children": [
+                            { "name": "start", "type": "<dateTime>" },
+                            { "name": "end", "type": "<dateTime>" }
+                        ]
+                    }
+                ]
+            },
+            { "name": "issued", "type": "<instant>" }, {
+                "name": "performer",
+                "children": [
+                    { "name": "reference", "type": "<string>" },
+                    { "name": "display", "type": "<string>" }
+                ]
+            }, {
+                "name": "values",
+                "children": [{
+                        "name": "valueQuantity",
+                        "children": [
+                            { "name": "value", "type": "<decimal>" },
+                            { "name": "comparator", "type": "<code>" },
+                            { "name": "unit", "type": "<string>" },
+                            { "name": "system", "type": "<uri>" },
+                            { "name": "code", "type": "<code>" }
+                        ]
+                    }, {
+                        "name": "valueCodeableConcept",
+                        "children": [{
+                                "name": "coding",
+                                "children": [
+                                    { "name": "system", "type": "<uri>" },
+                                    { "name": "version", "type": "<string>" },
+                                    { "name": "code", "type": "<code>" },
+                                    { "name": "display", "type": "<string>" },
+                                    { "name": "userSelected", "type": ["true", "false"] }
+                                ]
+                            },
+                            { "name": "text", "type": "<string>" }
+                        ]
+                    },
+                    { "name": "valueString", "type": "<string>" }, {
+                        "name": "valueRange",
+                        "children": [{
+                            "name": "low",
+                            "children": [
+                                { "name": "value", "type": "<decimal>" },
+                                { "name": "comparator", "type": "<code>" },
+                                { "name": "unit", "type": "<string>" },
+                                { "name": "system", "type": "<uri>" },
+                                { "name": "code", "type": "<code>" }
+                            ]
+                        }, {
+                            "name": "high",
+                            "children": [
+                                { "name": "value", "type": "<decimal>" },
+                                { "name": "comparator", "type": "<code>" },
+                                { "name": "unit", "type": "<string>" },
+                                { "name": "system", "type": "<uri>" },
+                                { "name": "code", "type": "<code>" }
+                            ]
+                        }]
+                    }, {
+                        "name": "valueRatio",
+                        "children": [{
+                            "name": "numerator",
+                            "children": [
+                                { "name": "value", "type": "<decimal>" },
+                                { "name": "comparator", "type": "<code>" },
+                                { "name": "unit", "type": "<string>" },
+                                { "name": "system", "type": "<uri>" },
+                                { "name": "code", "type": "<code>" }
+                            ]
+                        }, {
+                            "name": "denominator",
+                            "children": [
+                                { "name": "value", "type": "<decimal>" },
+                                { "name": "comparator", "type": "<code>" },
+                                { "name": "unit", "type": "<string>" },
+                                { "name": "system", "type": "<uri>" },
+                                { "name": "code", "type": "<code>" }
+                            ]
+                        }]
+                    }, {
+                        "name": "valueSampledData",
+                        "children": [{
+                                "name": "origin",
+                                "children": [
+                                    { "name": "value", "type": "<decimal>" },
+                                    { "name": "comparator", "type": "<code>" },
+                                    { "name": "unit", "type": "<string>" },
+                                    { "name": "system", "type": "<uri>" },
+                                    { "name": "code", "type": "<code>" }
+                                ]
+                            },
+                            { "name": "period", "type": "<decimal>" },
+                            { "name": "factor", "type": "<decimal>" },
+                            { "name": "lowerLimit", "type": "<decimal>" },
+                            { "name": "upperLimit", "type": "<decimal>" },
+                            { "name": "dimensions", "type": "<positiveInt>" },
+                            { "name": "data", "type": "<string>" }
+                        ]
+                    }, {
+                        "name": "valueAttachment",
+                        "children": [
+                            { "name": "contentType", "type": "<code>" },
+                            { "name": "language", "type": "<code>" },
+                            { "name": "data", "type": "<base64Binary>" },
+                            { "name": "url", "type": "<uri>" },
+                            { "name": "size", "type": "<unsignedInt>" },
+                            { "name": "hash", "type": "<base64Binary>" },
+                            { "name": "title", "type": "<string>" },
+                            { "name": "creation", "type": "<dateTime>" }
+                        ]
+                    },
+                    { "name": "valueTime", "type": "<time>" },
+                    { "name": "valueDateTime", "type": "<dateTime>" }, {
+                        "name": "valuePeriod",
+                        "children": [
+                            { "name": "start", "type": "<dateTime>" },
+                            { "name": "end", "type": "<dateTime>" }
+                        ]
+                    }
+                ]
+            }, {
+                "name": "dataAbsentReason",
+                "children": [{
+                        "name": "coding",
+                        "children": [
+                            { "name": "system", "type": "<uri>" },
+                            { "name": "version", "type": "<string>" },
+                            { "name": "code", "type": "<code>" },
+                            { "name": "display", "type": "<string>" },
+                            { "name": "userSelected", "type": ["true", "false"] }
+                        ]
+                    },
+                    { "name": "text", "type": "<string>" }
+                ]
+            },
+
+            {
+                "name": "interpretation",
+                "children": [{
+                        "name": "coding",
+                        "children": [
+                            { "name": "system", "type": "<uri>" },
+                            { "name": "version", "type": "<string>" },
+                            { "name": "code", "type": "<code>" },
+                            { "name": "display", "type": "<string>" },
+                            { "name": "userSelected", "type": ["true", "false"] }
+                        ]
+                    },
+                    { "name": "text", "type": "<string>" }
+                ]
+            },
+
+            { "name": "comments", "type": "<string>" }, {
+                "name": "bodySite",
+                "children": [{
+                        "name": "coding",
+                        "children": [
+                            { "name": "system", "type": "<uri>" },
+                            { "name": "version", "type": "<string>" },
+                            { "name": "code", "type": "<code>" },
+                            { "name": "display", "type": "<string>" },
+                            { "name": "userSelected", "type": ["true", "false"] }
+                        ]
+                    },
+                    { "name": "text", "type": "<string>" }
+                ]
+            },
+
+            {
+                "name": "method",
+                "children": [{
+                        "name": "coding",
+                        "children": [
+                            { "name": "system", "type": "<uri>" },
+                            { "name": "version", "type": "<string>" },
+                            { "name": "code", "type": "<code>" },
+                            { "name": "display", "type": "<string>" },
+                            { "name": "userSelected", "type": ["true", "false"] }
+                        ]
+                    },
+                    { "name": "text", "type": "<string>" }
+                ]
+            },
+
+            {
+                "name": "specimen",
+                "children": [
+                    { "name": "reference", "type": "<string>" },
+                    { "name": "display", "type": "<string>" }
+                ]
+            }, {
+                "name": "device",
+                "children": [
+                    { "name": "reference", "type": "<string>" },
+                    { "name": "display", "type": "<string>" }
+                ]
+            }, {
+                "name": "referenceRange",
+                "children": [{
+                        "name": "low",
+                        "children": [
+                            { "name": "value", "type": "<decimal>" },
+                            { "name": "comparator", "type": "<code>" },
+                            { "name": "unit", "type": "<string>" },
+                            { "name": "system", "type": "<uri>" },
+                            { "name": "code", "type": "<code>" }
+                        ]
+                    }, {
+                        "name": "high",
+                        "children": [
+                            { "name": "value", "type": "<decimal>" },
+                            { "name": "comparator", "type": "<code>" },
+                            { "name": "unit", "type": "<string>" },
+                            { "name": "system", "type": "<uri>" },
+                            { "name": "code", "type": "<code>" }
+                        ]
+                    }, {
+                        "name": "meaning",
+                        "children": [{
+                                "name": "coding",
+                                "children": [
+                                    { "name": "system", "type": "<uri>" },
+                                    { "name": "version", "type": "<string>" },
+                                    { "name": "code", "type": "<code>" },
+                                    { "name": "display", "type": "<string>" },
+                                    { "name": "userSelected", "type": ["true", "false"] }
+                                ]
+                            },
+                            { "name": "text", "type": "<string>" }
+                        ]
+                    }, {
+                        "name": "age",
+                        "children": [{
+                            "name": "low",
+                            "children": [
+                                { "name": "value", "type": "<decimal>" },
+                                { "name": "comparator", "type": "<code>" },
+                                { "name": "unit", "type": "<string>" },
+                                { "name": "system", "type": "<uri>" },
+                                { "name": "code", "type": "<code>" }
+                            ]
+                        }, {
+                            "name": "high",
+                            "children": [
+                                { "name": "value", "type": "<decimal>" },
+                                { "name": "comparator", "type": "<code>" },
+                                { "name": "unit", "type": "<string>" },
+                                { "name": "system", "type": "<uri>" },
+                                { "name": "code", "type": "<code>" }
+                            ]
+                        }]
+                    },
+                    { "name": "text", "type": "<string>" }
+                ]
+            }, {
+                "name": "related",
+                "children": [
+                    { "name": "type", "type": "<code>" }, {
+                        "name": "target",
+                        "children": [
+                            { "name": "reference", "type": "<string>" },
+                            { "name": "display", "type": "<string>" }
+                        ]
+                    }
+                ]
+            }, {
+                "name": "component",
+                "children": [{
+                        "name": "code",
+                        "children": [{
+                                "name": "coding",
+                                "children": [
+                                    { "name": "system", "type": "<uri>" },
+                                    { "name": "version", "type": "<string>" },
+                                    { "name": "code", "type": "<code>" },
+                                    { "name": "display", "type": "<string>" },
+                                    { "name": "userSelected", "type": ["true", "false"] }
+                                ]
+                            },
+                            { "name": "text", "type": "<string>" }
+                        ]
+                    }, {
+                        "name": "values",
+                        "children": [{
+                                "name": "valueQuantity",
+                                "children": [
+                                    { "name": "value", "type": "<decimal>" },
+                                    { "name": "comparator", "type": "<code>" },
+                                    { "name": "unit", "type": "<string>" },
+                                    { "name": "system", "type": "<uri>" },
+                                    { "name": "code", "type": "<code>" }
+                                ]
+                            }, {
+                                "name": "valueCodeableConcept",
+                                "children": [{
+                                        "name": "coding",
+                                        "children": [
+                                            { "name": "system", "type": "<uri>" },
+                                            { "name": "version", "type": "<string>" },
+                                            { "name": "code", "type": "<code>" },
+                                            { "name": "display", "type": "<string>" },
+                                            { "name": "userSelected", "type": ["true", "false"] }
+                                        ]
+                                    },
+                                    { "name": "text", "type": "<string>" }
+                                ]
+                            },
+                            { "name": "valueString", "type": "<string>" }, {
+                                "name": "valueRange",
+                                "children": [{
+                                    "name": "low",
+                                    "children": [
+                                        { "name": "value", "type": "<decimal>" },
+                                        { "name": "comparator", "type": "<code>" },
+                                        { "name": "unit", "type": "<string>" },
+                                        { "name": "system", "type": "<uri>" },
+                                        { "name": "code", "type": "<code>" }
+                                    ]
+                                }, {
+                                    "name": "high",
+                                    "children": [
+                                        { "name": "value", "type": "<decimal>" },
+                                        { "name": "comparator", "type": "<code>" },
+                                        { "name": "unit", "type": "<string>" },
+                                        { "name": "system", "type": "<uri>" },
+                                        { "name": "code", "type": "<code>" }
+                                    ]
+                                }]
+                            }, {
+                                "name": "valueRatio",
+                                "children": [{
+                                    "name": "numerator",
+                                    "children": [
+                                        { "name": "value", "type": "<decimal>" },
+                                        { "name": "comparator", "type": "<code>" },
+                                        { "name": "unit", "type": "<string>" },
+                                        { "name": "system", "type": "<uri>" },
+                                        { "name": "code", "type": "<code>" }
+                                    ]
+                                }, {
+                                    "name": "denominator",
+                                    "children": [
+                                        { "name": "value", "type": "<decimal>" },
+                                        { "name": "comparator", "type": "<code>" },
+                                        { "name": "unit", "type": "<string>" },
+                                        { "name": "system", "type": "<uri>" },
+                                        { "name": "code", "type": "<code>" }
+                                    ]
+                                }]
+                            }, {
+                                "name": "valueSampledData",
+                                "children": [{
+                                        "name": "origin",
+                                        "children": [
+                                            { "name": "value", "type": "<decimal>" },
+                                            { "name": "comparator", "type": "<code>" },
+                                            { "name": "unit", "type": "<string>" },
+                                            { "name": "system", "type": "<uri>" },
+                                            { "name": "code", "type": "<code>" }
+                                        ]
+                                    },
+                                    { "name": "period", "type": "<decimal>" },
+                                    { "name": "factor", "type": "<decimal>" },
+                                    { "name": "lowerLimit", "type": "<decimal>" },
+                                    { "name": "upperLimit", "type": "<decimal>" },
+                                    { "name": "dimensions", "type": "<positiveInt>" },
+                                    { "name": "data", "type": "<string>" }
+                                ]
+                            }, {
+                                "name": "valueAttachment",
+                                "children": [
+                                    { "name": "contentType", "type": "<code>" },
+                                    { "name": "language", "type": "<code>" },
+                                    { "name": "data", "type": "<base64Binary>" },
+                                    { "name": "url", "type": "<uri>" },
+                                    { "name": "size", "type": "<unsignedInt>" },
+                                    { "name": "hash", "type": "<base64Binary>" },
+                                    { "name": "title", "type": "<string>" },
+                                    { "name": "creation", "type": "<dateTime>" }
+                                ]
+                            },
+                            { "name": "valueTime", "type": "<time>" },
+                            { "name": "valueDateTime", "type": "<dateTime>" }, {
+                                "name": "valuePeriod",
+                                "children": [
+                                    { "name": "start", "type": "<dateTime>" },
+                                    { "name": "end", "type": "<dateTime>" }
+                                ]
+                            }
+                        ]
+                    }, {
+                        "name": "dataAbsentReason",
+                        "children": [{
+                                "name": "coding",
+                                "children": [
+                                    { "name": "system", "type": "<uri>" },
+                                    { "name": "version", "type": "<string>" },
+                                    { "name": "code", "type": "<code>" },
+                                    { "name": "display", "type": "<string>" },
+                                    { "name": "userSelected", "type": ["true", "false"] }
+                                ]
+                            },
+                            { "name": "text", "type": "<string>" }
+                        ]
+                    }, {
+                        "name": "referenceRange",
+                        "children": [{
+                                "name": "low",
+                                "children": [
+                                    { "name": "value", "type": "<decimal>" },
+                                    { "name": "comparator", "type": "<code>" },
+                                    { "name": "unit", "type": "<string>" },
+                                    { "name": "system", "type": "<uri>" },
+                                    { "name": "code", "type": "<code>" }
+                                ]
+                            }, {
+                                "name": "high",
+                                "children": [
+                                    { "name": "value", "type": "<decimal>" },
+                                    { "name": "comparator", "type": "<code>" },
+                                    { "name": "unit", "type": "<string>" },
+                                    { "name": "system", "type": "<uri>" },
+                                    { "name": "code", "type": "<code>" }
+                                ]
+                            }, {
+                                "name": "meaning",
+                                "children": [{
+                                        "name": "coding",
+                                        "children": [
+                                            { "name": "system", "type": "<uri>" },
+                                            { "name": "version", "type": "<string>" },
+                                            { "name": "code", "type": "<code>" },
+                                            { "name": "display", "type": "<string>" },
+                                            { "name": "userSelected", "type": ["true", "false"] }
+                                        ]
+                                    },
+                                    { "name": "text", "type": "<string>" }
+                                ]
+                            }, {
+                                "name": "age",
+                                "children": [{
+                                    "name": "low",
+                                    "children": [
+                                        { "name": "value", "type": "<decimal>" },
+                                        { "name": "comparator", "type": "<code>" },
+                                        { "name": "unit", "type": "<string>" },
+                                        { "name": "system", "type": "<uri>" },
+                                        { "name": "code", "type": "<code>" }
+                                    ]
+                                }, {
+                                    "name": "high",
+                                    "children": [
+                                        { "name": "value", "type": "<decimal>" },
+                                        { "name": "comparator", "type": "<code>" },
+                                        { "name": "unit", "type": "<string>" },
+                                        { "name": "system", "type": "<uri>" },
+                                        { "name": "code", "type": "<code>" }
+                                    ]
+                                }]
+                            },
+                            { "name": "text", "type": "<string>" }
+                        ]
+                    }
+
+                ]
+            }
+        ]
+}

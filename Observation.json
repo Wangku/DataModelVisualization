@@ -1,0 +1,64 @@
+{
+    "observation": {
+        "resourceType": ["Observation"],
+        "identifier": "Identifier",
+        "status": "<code>",
+        "category": "CodeableConcept",
+        "code": "CodeableConcept",
+        "subject": "Reference",
+        "encounter": "Reference",
+        "effectives": {
+            "effectiveDateTime": "<dateTime>",
+            "effectivePeriod": "Period"
+        },
+        "issued": "<instant>",
+        "performer": "Reference",
+        "values": {
+            "valueQuantity": "Quantity",
+            "valueCodeableConcept": "CodeableConcept",
+            "valueString": "<string>",
+            "valueRange": "Range",
+            "valueRatio": "Ratio",
+            "valueSampledData": "SampledData",
+            "valueAttachment": "Attachment",
+            "valueTime": "<time>",
+            "valueDateTime": "<dateTime>",
+            "valuePeriod": "Period"
+        },
+        "dataAbsentReason": "CodeableConcept",
+        "interpretation": "CodeableConcept",
+        "comments": "<string>",
+        "bodySite": "CodeableConcept",
+        "method": "CodeableConcept",
+        "specimen": "Reference",
+        "device": "Reference",
+        "referenceRange": [{
+            "low": "Quantity",
+            "high": "Quantity",
+            "meaning": "CodeableConcept",
+            "age": "Range",
+            "text": "<string>"
+        }],
+        "related": [{
+            "type": "<code>",
+            "target": "Reference"
+        }],
+        "component": [{
+            "code": "CodeableConcept",
+            "values": {
+                "valueQuantity": "Quantity",
+                "valueCodeableConcept": "CodeableConcept",
+                "valueString": "<string>",
+                "valueRange": "Range",
+                "valueRatio": "Ratio",
+                "valueSampledData": "SampledData",
+                "valueAttachment": "Attachment",
+                "valueTime": "<time>",
+                "valueDateTime": "<dateTime>",
+                "valuePeriod": "Period"
+            },
+            "dataAbsentReason": "CodeableConcept",
+            "referenceRange": ["referenceRange"]
+        }]
+    }
+}
